@@ -14,14 +14,14 @@ personas: Persona[];
   constructor(private router: Router, private personaService:PersonaService) { }
 
   ngOnInit() {
-    this.personaService.getPersonas().subscribe(data =>{
+    this.personaService.findPersona().subscribe(data =>{
 
       this.personas = data;
     })
   }
 
 deletePersona(persona:Persona):void{
-this.personaService.deletePersona(persona).subscribe(data =>{
+this.personaService.delPersona(persona).subscribe(data =>{
 
   this.personas =this.personas.filter(p => p !== persona);
 })

@@ -4,31 +4,33 @@
   <table class="table table-striped">
     <thead>
     <tr>
-      <th class="hidden">Id</th>
-      <th>idpersona</th>
+      <th class="hidden"></th>
       <th>nombre</th>
       <th>apellido1</th>
       <th>apellido2</th>
       <th>dni</th>
       <th>fechanacimiento</th>
-      <th>iddireccio</th>
       <th>direccion</th>
       <th>codpostal</th>
       <th>localidad</th>
-      <th>idtelefono</th>
       <th>telefono</th>
-      <th>idprovincial</th>
       <th>provincia</th>
 
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let user of users">
-      <td class="hidden">{{user.id}}</td>
-      <td>{{user.firstName}}</td>
-      <td>{{user.lastName}}</td>
-      <td>{{user.email}}</td>
-      <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete User</button></td>
+    <tr *ngFor="let persona of personas">
+      <td class="hidden">{{persona.nombre}}</td>
+      <td>{{persona.apellido1}}</td>
+      <td>{{persona.apellido2}}</td>
+      <td>{{persona.dni}}</td>
+      <td>{{persona.fechanacimiento}}</td>
+      <td>{{persona.direccion}}</td>
+      <td>{{persona.codpostal}}</td>
+      <td>{{persona.localidad}}</td>
+      <td>{{telefono}}</td>
+      <td>{{provincia}}</td>
+      <td><button class="btn btn-danger" (click)="deletePersona(persona)"> Delete Persona</button></td>
     </tr>
     </tbody>
   </table>

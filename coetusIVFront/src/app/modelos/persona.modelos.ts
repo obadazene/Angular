@@ -4,7 +4,7 @@ export class Persona {
   public apellido1: String;
   public apellido2: String;
   public dni: String;
-   public fechanacimiento: String;
+   public fechanacimiento: Date;
    public iddireccion: number;
    public direccion : String;
    public codpostal: String;

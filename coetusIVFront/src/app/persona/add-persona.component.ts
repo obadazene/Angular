@@ -14,8 +14,8 @@ export class AddPersonaComponent {
 
   }
 
-  createUser(): void {
-    this.personaService.createPersona(this.persona)
+  createPersona(): void {
+    this.personaService.addPersona(this.persona)
         .subscribe( data => {
           alert("Persona created successfully.");
         });

@@ -12,19 +12,19 @@ export class PersonaService {
 
   constructor(private http:HttpClient) {}
 
-  private userUrl = 'http://localhost:8080/user-portal/users';
+  private personUrl = 'http://localhost:8080/user-portal/users';
   //private userUrl = '/api';
 
-  public getPersonas() {
-    return this.http.get<Persona[]>(this.userUrl);
+  public findPersona() {
+    return this.http.get<Persona[]>(this.personUrl);
   }
 
-  public deletePersona(persona) {
-    return this.http.delete(this.userUrl + "/"+ persona.id);
+  public delPersona(persona) {
+    return this.http.delete(this.personUrl + "/"+ persona.id);
   }
 
-  public createPersona(persona) {
-    return this.http.post<Persona>(this.userUrl, persona);
+  public addPersona(persona) {
+    return this.http.post<Persona>(this.personUrl, persona);
   }
 
 }

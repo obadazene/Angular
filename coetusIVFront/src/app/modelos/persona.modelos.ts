@@ -12,5 +12,5 @@ export class Persona {
    public idtelefono: Number;
    public telefono: String;
    public idprovincia: Number;
-   public provencia: String;
+   public provincia: String;
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Persona } from '../modelos/persona.modelos';
-import {PersonaService} from './persona.service'
+import { Persona } from '../persona'
+import {PersonaService} from '../persona.service'
 @Component({
   selector: 'app-persona',
   templateUrl: './persona.component.html',
@@ -21,7 +21,8 @@ personas: Persona[];
   }
 
 deletePersona(persona:Persona):void{
-this.personaService.delPersona(persona).subscribe(data =>{
+this.personaService.delPersona(persona)
+.subscribe(data =>{
 
   this.personas =this.personas.filter(p => p !== persona);
 })

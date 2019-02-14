@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PersonaComponent } from './persona/persona.component';
+import {PersonaService} from './persona.service';
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import { PersonaComponent } from './persona/persona.component';
     BrowserModule
     
   ],
-  providers: [],
+  providers: [PersonaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,7 +5,7 @@ import {AddPersonaComponent} from './add-persona.component'
 
 
 const routes: Routes = [
-  { path: 'users', component: PersonaComponent },
+  { path: 'persona', component: PersonaComponent },
   { path: 'add', component: AddPersonaComponent }
 ];
 

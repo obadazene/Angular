@@ -1,13 +1,11 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
+import {Persona} from './persona';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Persona } from '../modelos/persona.modelos';
 
 
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
-
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class PersonaService {
 
   constructor(private http:HttpClient) {}
@@ -26,5 +24,4 @@ export class PersonaService {
   public addPersona(persona) {
     return this.http.post<Persona>(this.personUrl, persona);
   }
-
 }

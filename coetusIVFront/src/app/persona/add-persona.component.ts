@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Persona } from '../modelos/persona.modelos';
-import { PersonaService } from './persona.service';
-
+import { Persona } from '../persona'
+import {PersonaService} from '../persona.service'
 @Component({
   templateUrl: './add-persona.component.html'
 })
